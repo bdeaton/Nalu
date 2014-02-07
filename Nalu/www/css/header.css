@@ -1,0 +1,32 @@
+.header-primary.ui-header.ui-bar-inherit{
+	background:yellow;
+	width:100%;
+	display:block;
+	height:196px;
+	border:none;
+	background:transparent url(../img/header-graphic.png) no-repeat top center;
+}
+	.header-primary .btn-menu{
+		display:block;
+		position:relative;
+		float:left;
+		margin:10px 0 0 24px;
+		color:#d98057;
+	}
+		.header-primary .btn-menu span{
+			text-align:center;
+			font-size:1.5em;
+			text-transform:uppercase;
+			text-shadow:none;
+		}
+		.header-primary .btn-menu i{
+			clear: both;
+			font-size: 3.3em;
+			text-shadow:none;
+			display: block;
+			text-align: center;
+			left:-3px;
+			position:relative;
+			top:4px;
+			line-height:0.75em;
+		}

@@ -1,0 +1,29 @@
+.nav-primary{
+	font-size:3.0em;
+	text-shadow:none;
+	color:#89d6e0;
+	padding:6.997084548104956% 0 0 7.580174927113703%;
+	text-transform:uppercase;
+}
+	.nav-primary li{
+		margin-top:7.0%;
+	}
+	.nav-primary li.first{
+		margin-top:0;
+	}
+
+
+		.nav-primary li a,
+		.nav-primary li a:link,
+		.nav-primary li a:visited,
+		.nav-primary li a:hover,
+		.nav-primary li a:active{
+			color:#89d6e0;
+		}
+h3.logo{
+	background:transparent url(../img/icon-nav.png) no-repeat 0 0;
+	display:block;
+	width:278px;
+	height:92px;
+	margin:14% auto 0;
+}

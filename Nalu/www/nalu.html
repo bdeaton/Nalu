@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=0.5, maximum-scale=1.0, user-scalable=0;"/>
+	
+	<link rel="stylesheet" href="css/reset-min.css" />
+	<link rel="stylesheet" href="css/libraries/jquery-ui/minified/jquery-ui.min.css" />
+	<link rel="stylesheet" href="css/libraries/jquery.mobile-1.4.0.min.css" />
+    <link href='http://fonts.googleapis.com/css?family=Boogaloo:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/base.css" />
+	<link rel="stylesheet" href="css/panels.css" />
+	<link rel="stylesheet" href="css/nav.css" />
+	<link rel="stylesheet" href="css/header.css" />
+	<link rel="stylesheet" href="css/content.css" />
+	<link rel="stylesheet" href="css/queries.css" />
+	<link rel="stylesheet" href="css/override.css" />
+	<!--
+	-->
+
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+
+</head>
+
+<body class="body-nalu body-page-home" data-version="0.01">
+	<div data-role="page" id="home" data-page="home" class="page-home">
+		<div data-role="panel" id="home-panel-menu" class="panel-menu" data-display="push" data-position="left">
+			<ul class="nav-primary">
+				<li class="first nav-home">
+					<a href="#home" data-ajax="true">
+						<span>Home</span>
+					</a>
+				</li>
+				<li class="nav-friends">
+					<a href="#friends" data-ajax="true">
+						<span>Friends</span>
+					</a>
+				</li>
+				<li class="nav-specials">
+					<a href="#specials" data-ajax="true">
+						<span>Specials</span>
+					</a>
+				</li>
+				<li class="nav-dev">
+					<a href="#dev" data-ajax="true">
+						<span>Dev</span>
+					</a>
+				</li>
+			</ul>
+			<h3 class="logo"></h3>
+		</div>
+		<div data-role="header" class="header-primary">
+		  <em data-href="#home-panel-menu" class="btn btn-menu"><span>Nav</span><i class="fa fa-bars"></i></em>
+		</div>
+		<div class="content-main" data-role="content">
+			HOME PAGE
+		</div>
+	</div>
+	<div data-role="page" id="friends" data-page="friends" class="page-friends">
+		<div data-role="panel" id="friends-panel-menu" class="panel-menu" data-display="push" data-position="left">
+			<ul class="nav-primary">
+				<li class="first nav-home">
+					<a href="#home" data-ajax="true">
+						<span>Home</span>
+					</a>
+				</li>
+				<li class="nav-friends">
+					<a href="#friends" data-ajax="true">
+						<span>Friends</span>
+					</a>
+				</li>
+				<li class="nav-specials">
+					<a href="#specials" data-ajax="true">
+						<span>Specials</span>
+					</a>
+				</li>
+				<li class="nav-dev">
+					<a href="#dev" data-ajax="true">
+						<span>Dev</span>
+					</a>
+				</li>
+			</ul>
+			<h3 class="logo"></h3>
+		</div>
+		<div data-role="header" class="header-primary">
+		  <em data-href="#friends-panel-menu" class="btn btn-menu"><span>Nav</span><i class="fa fa-bars"></i></em>
+		</div>
+		<div class="content-main" data-role="content">
+			friends PAGE
+		</div>
+	</div>
+	
+	<div data-role="page" id="specials" data-page="specials" class="page-specials">
+		<div data-role="panel" id="specials-panel-menu" class="panel-menu" data-display="push" data-position="left">
+			<ul class="nav-primary">
+				<li class="first nav-home">
+					<a href="#home" data-ajax="true">
+						<span>Home</span>
+					</a>
+				</li>
+				<li class="nav-friends">
+					<a href="#friends" data-ajax="true">
+						<span>Friends</span>
+					</a>
+				</li>
+				<li class="nav-specials">
+					<a href="#specials" data-ajax="true">
+						<span>Specials</span>
+					</a>
+				</li>
+				<li class="nav-dev">
+					<a href="#dev" data-ajax="true">
+						<span>Dev</span>
+					</a>
+				</li>
+			</ul>
+			<h3 class="logo"></h3>
+		</div>
+		<div data-role="header" class="header-primary">
+		  <em data-href="#specials-panel-menu" class="btn btn-menu"><span>Nav</span><i class="fa fa-bars"></i></em>
+		</div>
+		<div class="content-main" data-role="content">
+			specials PAGE
+		</div>
+	</div>
+	
+	<div data-role="page" id="dev" data-page="dev" class="page-dev">
+		<div data-role="panel" id="dev-panel-menu" class="panel-menu" data-display="push" data-position="left">
+			<ul class="nav-primary">
+				<li class="first nav-home">
+					<a href="#home" data-ajax="true">
+						<span>Home</span>
+					</a>
+				</li>
+				<li class="nav-friends">
+					<a href="#friends" data-ajax="true">
+						<span>Friends</span>
+					</a>
+				</li>
+				<li class="nav-specials">
+					<a href="#specials" data-ajax="true">
+						<span>Specials</span>
+					</a>
+				</li>
+				<li class="nav-dev">
+					<a href="#dev" data-ajax="true">
+						<span>Dev</span>
+					</a>
+				</li>
+			</ul>
+			<h3 class="logo"></h3>
+		</div>
+		<div data-role="header" class="header-primary">
+		  <em data-href="#dev-panel-menu" class="btn btn-menu"><span>Nav</span><i class="fa fa-bars"></i></em>
+		</div>
+		<div class="content-main" data-role="content">
+			dev PAGE
+		</div>
+	</div>
+	
+	<script src="js/libraries/handlebars-v1.1.2.js"></script>
+	<script src="js/libraries/handlebars.helpers.js"></script>
+	
+
+	<script src="js/libraries/jquery-1.11.0.min.js"></script>
+	<script src="js/libraries/jquery-ui-1.10.4.js"></script>
+	<script src="js/libraries/jquery.mobile-1.4.0.min.js"></script>
+	<script src="js/libraries/handlebars-v1.1.2.js"></script>
+	<script src="js/libraries/handlebars.helpers.js"></script>
+	
+	<script src="js/app.js"></script>
+	
+</body>
+</html>

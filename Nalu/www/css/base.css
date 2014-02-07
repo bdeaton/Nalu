@@ -1,0 +1,44 @@
+/*global elements*/
+body,html{
+	font-size:18px;
+	font-weight:100;
+	color:#48565b;
+}
+a{
+	text-decoration:underline;
+	text-decoration:none;
+	cursor:pointer;
+}
+a:link,a:visited,a:hover,a:active{
+	color:inherit;
+}
+ul{
+	margin:0;
+	padding:0;	
+}
+li{
+	list-style:none;	
+}
+input[type=range]{
+  
+}
+body,a,button{
+	font-family:"Boogaloo";
+}
+h3,
+h4{
+	color:#a2b3ba;
+	font-weight:100;
+	text-align:center;
+}
+:focus {
+	outline: none;
+}
+input:focus {
+	outline-offset:0;
+}
+
+/*	PAGE-LEVEL	*/
+
+
+

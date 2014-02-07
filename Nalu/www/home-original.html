@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<!--HTML5 doctype-->
+<html>
+
+ <head>
+  <link rel="stylesheet" type="text/css" href="jqm/jquery.mobile-min.css">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+  <title>Your New Application</title>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+  <style type="text/css">
+   /* Prevent copy paste for all elements except text fields */
+   		*  { -webkit-user-select:none; -webkit-tap-highlight-color:rgba(255, 255, 255, 0); }
+   		input, textarea  { -webkit-user-select:text; }
+      background-image:url('/images/bg.png');
+  </style>
+  <script src="intelxdk.js"></script>
+  <script src="cordova.js"></script>
+  <script type="application/javascript" src="js/jquery.min.js"></script>
+  <script type="application/javascript" src="jqm/jquery.mobile-min.js" data-ver="0"></script>
+  <script type="application/javascript" src="sidebar/js/jquery.event.move.js"></script>
+  <script type="application/javascript" src="sidebar/js/jquery.event.swipe.js"></script>
+  <script type="application/javascript" src="sidebar/js/sidebar.js"></script>
+  <script type="application/javascript" src="sidebar/js/swipe.js"></script>
+  <script type="application/javascript" src="js/index_user_scripts.js"></script>
+  <script type="application/javascript" src="js/jqm_subpage.js"></script>
+  <script type="application/javascript" src="popup/popup.min.js"></script>
+  <script type="application/javascript" src="js/qrcode.min.js"></script>
+  <script type="application/javascript" src="js/nalus.js"></script>
+  <script type="application/javascript" src="js/Chart.min.js"></script>
+
+<link rel="stylesheet" href="css/nalus1.min.css" >
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" >
+<!-- 
+			<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+			<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+	 -->
+
+  <link href="http://fonts.googleapis.com/css?family=Boogaloo" rel="stylesheet" type="text/css">
+
+  <style>
+	
+	   body
+	      {
+		       background: url("/images/bg.png") no-repeat !important;
+	           font-family: 'Boogaloo', cursive;
+	      }
+	      
+		div {
+	       	background: url("images/bg.png") no-repeat !important;
+		}
+      
+  </style>
+
+ </head>
+
+ <body style='background: url("/images/bg.png") no-repeat !important;'>
+  <!-- content goes here-->
+  <div class="uwrap">
+   <div class="upage bg" id="mainpage" data-role="page">
+    <div class="upage-outer">
+
+     <div class="upage-content" id="mainsub">
+
+
+
+      <div class="grid grid-pad urow uib_row_6 row-height-6 bar-bg" data-uib="layout/row" data-ver="0">
+       <div class="col uib_col_6 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <a class="widget uib_w_6 d-margins Menu-B-Width" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true"
+         id="mainMenuBtn">Menu</a>
+         <span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+
+
+
+
+
+
+
+     </div>
+     <div id="dev-page" class="upage-content hidden">
+
+      <div class="grid grid-pad urow uib_row_42 row-height-42 bar-bg" data-uib="layout/row" data-ver="0">
+       <div class="col uib_col_54 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <a class="widget uib_w_88 d-margins Menu-B-Width" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true"
+         id="mainMenuBtn">Menu</a>
+         <span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+      <div class="grid grid-pad urow uib_row_41 row-height-41" data-uib="layout/row" data-ver="0">
+       <div class="col uib_col_53 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <a class="widget uib_w_86 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" href="#login" data-transition="fade"
+         id="devLoginLinkbtn">login</a>
+         <a class="widget uib_w_87 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" href="#join" data-transition="fade"
+         id="devJoinLinkBtn">Join</a><a class="widget uib_w_94 d-margins" data-uib="jquery_mobile/button" data-ver="0"
+         data-role="button" id="logoutBtn">Logout</a>
+         <span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+     </div>
+     <div id="give" class="upage-content hidden">
+
+      <div class="grid grid-pad urow uib_row_30 row-height-6 bar-bg" data-uib="layout/row" data-ver="0">
+       <div class="col uib_col_41 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <a class="widget uib_w_62 d-margins Menu-B-Width" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true"
+         id="mainMenuBtn">Menu</a>
+         <span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+      <div class="grid grid-pad urow uib_row_23 row-height-23" data-uib="layout/row" data-ver="0">
+       <div class="col uib_col_31 col-0_6-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="widget uib_w_44 d-margins" data-uib="media/text" data-ver="0" id="gatLabel">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div>
+           <p>Giving account total</p>
+          </div>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <div class="col uib_col_32 col-0_6-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="widget uib_w_45 d-margins" data-uib="media/text" data-ver="0" id="gatTotalQ">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div>
+           <p>Total amount</p>
+          </div>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+
+      <div class="grid grid-pad urow uib_row_24 row-height-24" data-uib="layout/row" data-ver="0">
+       <div class="col uib_col_33 col-0_6-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="widget uib_w_46 d-margins" data-uib="media/text" data-ver="0" id="totalGiftsLabel">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div>
+           <p>My total gifts made</p>
+          </div>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <div class="col uib_col_34 col-0_6-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="widget uib_w_47 d-margins" data-uib="media/text" data-ver="0" id="giftTotalQ">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div>
+           <p>Total amount</p>
+          </div>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+
+      <div class="grid grid-pad urow uib_row_25 row-height-25" data-uib="layout/row" data-ver="0">
+       <div class="col uib_col_35 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="widget uib_w_48 d-margins" data-uib="media/text" data-ver="0">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div>
+           <p>Live feed of giving pie chart.</p>
+          </div>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+
+      <div class="grid grid-pad urow uib_row_26 row-height-26" data-uib="layout/row" data-ver="0">
+       <div class="col uib_col_36 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div data-role="controlgroup" class="uib-jqm-flex widget-container widget uib_w_49 d-margins" data-uib="jquery_mobile/button_group"
+         data-ver="0" data-type="horizontal">
+          <a class="widget uib_w_50" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true" id="nalusGivingFeedBtn">Nalu's Giving</a>
+          <a class="widget uib_w_51" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true" id="publicGivingFeedBtn">Public Giving</a>
+          <a class="widget uib_w_52" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true" id="myGivingFeedBtn">My Giving</a>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+     </div>
+     <div id="payments" class="upage-content hidden">
+
+      <div class="grid grid-pad urow uib_row_29 row-height-6 bar-bg" data-uib="layout/row" data-ver="0">
+       <div class="col uib_col_40 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <a class="widget uib_w_61 d-margins Menu-B-Width" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true"
+         id="mainMenuBtn">Menu</a>
+         <span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+      <div class="grid grid-pad urow uib_row_19 row-height-19" data-uib="layout/row" data-ver="0">
+       <div class="col uib_col_21 col-0_6-12_6-6" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="widget uib_w_31 d-margins" data-uib="media/text" data-ver="0">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div>
+           <p>Account total</p>
+          </div>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <div class="col uib_col_22 col-0_4-12_4-6" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="widget uib_w_32 d-margins" data-uib="media/text" data-ver="0" id="paTotalQ">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div>
+           <p id="accTotal">$45.37</p>
+          </div>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <div class="col uib_col_23 col-0_2-12_2-6" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <a class="widget uib_w_33 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-icon="plus" data-mini="true"
+         id="paAddBtn">at-add</a>
+         <span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+
+      <div class="grid grid-pad urow uib_row_20 row-height-20" data-uib="layout/row" data-ver="0">
+       <div class="col uib_col_24 col-0_6-12_6-6" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="widget uib_w_34 d-margins" data-uib="media/text" data-ver="0">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div>
+           <p>VIP total</p>
+          </div>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <div class="col uib_col_25 col-0_4-12_4-6" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="widget uib_w_35 d-margins" data-uib="media/text" data-ver="0" id="saTotalQ">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div>
+           <p id="vipTotal">$7.00</p>
+          </div>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <div class="col uib_col_26 col-0_2-12_2-6" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <a class="widget uib_w_36 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-icon="star" data-mini="true"
+         id="saInfoBtn">S</a>
+         <span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+
+      <div class="grid grid-pad urow uib_row_21 row-height-21" data-uib="layout/row" data-ver="0">
+       <div class="col uib_col_27 col-0_6-12_6-6" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="widget uib_w_37 d-margins" data-uib="media/text" data-ver="0">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div>
+           <p>Total Given</p>
+          </div>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <div class="col uib_col_28 col-0_4-12_4-6" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="widget uib_w_38 d-margins" data-uib="media/text" data-ver="0" id="gaTotalQ">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div>
+           <p id="giveTotal">$5.00</p>
+          </div>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <div class="col uib_col_29 col-0_2-12_2-6" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <a class="widget uib_w_39 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-icon="heart" data-mini="true"
+         id="gaInfoBtn">tg-add</a>
+         <span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+
+      <div class="grid grid-pad urow uib_row_22 row-height-22" data-uib="layout/row" data-ver="0">
+       <div class="col uib_col_30 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="widget uib_w_40 ui-content no_wrap outset-margin d-margins" data-uib="jquery_mobile/listview" data-ver="0">
+          <ul data-role="listview" id="transActions">
+           <li class="widget uib_w_41" data-uib="jquery_mobile/listitem" data-ver="0">
+            <span>Date - trans type</span>
+            <span class="ui-li-count">amount</span>
+           </li>
+          </ul>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+     </div>
+     <div id="specials" class="upage-content hidden">
+
+      <div class="grid grid-pad urow uib_row_13 row-height-6 bar-bg" data-uib="layout/row" data-ver="0">
+
+
+       <div class="col uib_col_39 col-0" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <a class="widget uib_w_60 d-margins Menu-B-Width" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true"
+         id="mainMenuBtn">Menu</a>
+         <a class="widget uib_w_95 d-margins Menu-B-Width" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true"
+         id="addSpecialPageBtn">Add</a><span class="uib_shim"></span>
+        </div>
+       </div>
+
+
+       <span class="uib_shim"></span>
+      </div>
+
+
+
+      <div class="grid grid-pad urow uib_row_15 row-height-15" data-uib="layout/row" data-ver="0">
+
+
+       <div class="col uib_col_14 col-0" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="widget uib_w_22 ui-content no_wrap outset-margin d-margins" data-uib="jquery_mobile/listview" data-ver="0">
+          <ul data-role="listview" id="specialView">
+           <li class="widget uib_w_23" data-uib="jquery_mobile/listitem" data-ver="0">
+            <h2>Special Name</h2>
+            <p>Special description</p>
+            <p class="ui-li-aside">Experation date</p>
+           </li>
+          </ul>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div><span class="uib_shim"></span>
+      </div>
+     </div>
+     <div id="friends" class="upage-content hidden">
+
+      <div class="grid grid-pad urow uib_row_28 row-height-6 bar-bg" data-uib="layout/row" data-ver="0">
+       <div class="col uib_col_38 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <a class="widget uib_w_59 d-margins Menu-B-Width" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true"
+         id="mainMenuBtn">Menu</a>
+         <span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+      <div class="grid grid-pad urow uib_row_9 row-height-9" data-uib="layout/row" data-ver="0">
+       <div class="col uib_col_9 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="widget uib_w_13 d-margins" data-uib="media/text" data-ver="0">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div>
+           <p>Enter BFF's Phone number here</p>
+          </div>
+         </div>
+         <div class="widget uib_w_14 d-margins" data-uib="media/text" data-ver="0">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div>
+           <p>Make sure the number can receive SMS messages before sending.</p>
+          </div>
+         </div>
+         <div class="table-thing with-label widget uib_w_15 d-margins" data-uib="jquery_mobile/input" data-ver="0">
+          <label class="narrow-control" for="bffNumberFld"></label>
+          <input class="wide-control" type="tel" placeholder="BFF's Number" id="bffNumberFld">
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+
+      <div class="grid grid-pad urow uib_row_10 row-height-10" data-uib="layout/row" data-ver="0">
+       <div class="col uib_col_10 col-0_6-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <a class="widget uib_w_16 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="bffInviteBtn" href="#jqm-popup-bff"
+         data-rel="popup">Send Invite</a>
+         <span class="uib_shim"></span>
+        </div>
+       </div>
+       <div class="col uib_col_11 col-0_6-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <a class="widget uib_w_17 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="bffContactsBtn">From Contacts</a>
+         <span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+
+      <div class="grid grid-pad urow uib_row_11 row-height-11" data-uib="layout/row" data-ver="0">
+       <div class="col uib_col_12 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="widget uib_w_18 ui-content no_wrap outset-margin d-margins" data-uib="jquery_mobile/listview" data-ver="0">
+          <ul data-role="listview" id="friendList">
+
+           <li class="widget uib_w_19" data-uib="jquery_mobile/listitem" data-ver="0">
+            <span>Name Here</span>
+            <span class="ui-li-count">
+           			Status here
+           		</span>
+           </li>
+
+          </ul>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+     </div>
+     <div id="home" class="upage-content hidden">
+
+      <div class="grid grid-pad urow uib_row_27 row-height-6 bar-bg" data-uib="layout/row" data-ver="0">
+       <div class="col uib_col_37 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <a class="widget uib_w_58 d-margins Menu-B-Width" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true"
+         id="mainMenuBtn">Menu</a>
+         <span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+      <div class="grid grid-pad urow uib_row_7 row-height-7" data-uib="layout/row" data-ver="0">
+       <div class="col uib_col_7 col-0_12-12 card-bg" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col left">
+
+         <div class="widget uib_w_11 d-margins" data-uib="media/text" data-ver="0">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div>
+           <p>QR code here.</p>
+           <p></p>
+           <div id="qrcode"></div>
+          </div>
+         </div>
+         <span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+
+      <div class="grid grid-pad urow uib_row_8 row-height-8" data-uib="layout/row" data-ver="0">
+       <div class="col uib_col_8 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="widget uib_w_12 d-margins" data-uib="media/text" data-ver="0">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div>
+           <p>Give and recieve special description</p>
+          </div>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+     </div>
+     <!-- /upage-content -->
+
+     <div class="inner-element uib_w_4 uib_sidebar leftbar thumb-bg bar-gutter" data-uib="layout/left_sidebar" data-ver="0" data-anim="{'style':'push', 'v':200, 'side':'left', 'dur':200}">
+      <div class="sidebar-content">
+
+
+
+
+       <div class="grid grid-pad urow uib_row_12 row-height-12" data-uib="layout/row" data-ver="0">
+        <div class="col uib_col_13 col-0_12-12" data-uib="layout/col" data-ver="0">
+         <div class="widget-container content-area vertical-col">
+
+          <div class="widget uib_w_102 d-margins menu-logo-scaling" data-uib="media/img" data-ver="0">
+           <figure class="figure-align">
+            <img src="sidebar/css/images/logo-png.png">
+            <figcaption data-position="bottom"></figcaption>
+           </figure>
+          </div><a class="widget uib_w_53 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true"
+          id="mmHomeBtn">Home</a>
+          <a class="widget uib_w_54 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true" id="mmFriendsBtn">Friends</a>
+          <a class="widget uib_w_55 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true" id="mmSpecialsBtn">Specials</a>
+          <a class="widget uib_w_56 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true" id="mmPaymentsBtn">Payments</a>
+          <a class="widget uib_w_57 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true" id="mmGiveBtn">Give</a>
+          <a class="widget uib_w_85 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true" id="mmDevBtn">Dev</a>
+
+          <span class="uib_shim"></span>
+         </div>
+        </div>
+        <span class="uib_shim"></span>
+       </div>
+      </div>
+     </div>
+
+    </div>
+    <!-- /upage-outer -->
+
+
+   </div>
+   <div class="upage Lock" id="activation" data-role="page">
+    <div class="upage-outer">
+     <div id="activationsub" class="upage-content ">
+
+
+
+
+
+      <div class="grid grid-pad urow uib_row_47 row-height-47" data-uib="layout/row" data-ver="0">
+       <div class="col uib_col_61 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="table-thing with-label widget uib_w_99 d-margins" data-uib="jquery_mobile/input" data-ver="0">
+          <label class="narrow-control" for="smsKey"></label>
+          <input class="wide-control" placeholder="SMS Activation Key" type="text" id="smsKey">
+         </div><a class="widget uib_w_100 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button">Activate</a><a
+  class="widget uib_w_101 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="resendButton">Resend Activation</a>
+         <span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+     </div>
+    </div>
+    <!-- /upage-outer -->
+   </div>
+   <div class="upage" id="addSpecialPage" data-role="page">
+    <div class="upage-outer">
+     <div id="addSpecialPagesub" class="upage-content ">
+
+      <div class="grid grid-pad urow uib_row_43 row-height-6" data-uib="layout/row" data-ver="0">
+       <div class="col uib_col_57 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <a class="widget uib_w_96 d-margins Menu-B-Width" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true"
+         id="newSpecialBkBtn">Back</a><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+
+      <div class="grid grid-pad urow uib_row_44 row-height-44" data-uib="layout/row" data-ver="0">
+       <div class="col uib_col_58 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="table-thing with-label widget uib_w_97 d-margins" data-uib="jquery_mobile/input" data-ver="0">
+          <label class="narrow-control" for="addSpecialCodeFld"></label>
+          <input class="wide-control" type="text" placeholder="Special code here" id="addSpecialCodeFld">
+         </div><a class="widget uib_w_98 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="addSpecialBtn">Add</a>
+         <span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+     </div>
+    </div>
+    <!-- /upage-outer -->
+   </div>
+   <div class="upage" id="login" data-role="page">
+
+    <div class="upage-outer">
+     <div id="loginsub" class="upage-content ">
+
+      <div class="grid grid-pad urow uib_row_38 row-height-38" data-uib="layout/row" data-ver="0">
+       <div class="col uib_col_50 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <a class="widget uib_w_84 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true" id="devPageBtn">Dev</a>
+         <div class="widget uib_w_80 d-margins" data-uib="media/text" data-ver="0">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div>
+           <p>Login</p>
+          </div>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+
+      <div class="grid grid-pad urow uib_row_39 row-height-39" data-uib="layout/row" data-ver="0">
+       <div class="col uib_col_51 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="table-thing with-label widget uib_w_81 d-margins" data-uib="jquery_mobile/input" data-ver="0">
+          <label class="narrow-control" for="loginPhoneFld"></label>
+          <input class="wide-control" placeholder="Phone" type="text" id="loginPhoneFld">
+         </div>
+         <div class="table-thing with-label widget uib_w_82 d-margins" data-uib="jquery_mobile/input" data-ver="0">
+          <label class="narrow-control" for="loginPassFld"></label>
+          <input class="wide-control" placeholder="Password" type="text" id="loginPassFld">
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+
+      <div class="grid grid-pad urow uib_row_40 row-height-40" data-uib="layout/row" data-ver="0">
+       <div class="col uib_col_52 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <a class="widget uib_w_83 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="loginBtn">Login</a>
+         <span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+     </div>
+    </div>
+    <!-- /upage-outer -->
+   </div>
+   <div class="upage" id="join" data-role="page">
+
+    <div class="upage-outer">
+     <div id="joinsub" class="upage-content ">
+
+      <div class="grid grid-pad urow uib_row_31 row-height-31" data-uib="layout/row" data-ver="0">
+       <div class="col uib_col_42 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <a class="widget uib_w_71 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true" id="devPageBtn">Dev</a>
+         <div class="widget uib_w_63 d-margins" data-uib="media/text" data-ver="0">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div>
+           <p>Join</p>
+          </div>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+
+      <form class="grid grid-pad urow uib_row_32 row-height-32" data-uib="layout/row" data-ver="0">
+       <div class="col uib_col_43 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="table-thing with-label widget uib_w_65 d-margins" data-uib="jquery_mobile/input" data-ver="0">
+          <label class="narrow-control" for="joinFNameFld"></label>
+          <input class="wide-control" placeholder="First Name" type="text" id="joinFNameFld">
+         </div>
+         <div class="table-thing with-label widget uib_w_64 d-margins" data-uib="jquery_mobile/input" data-ver="0">
+          <label class="narrow-control" for="joinLNameFld"></label>
+          <input class="wide-control" placeholder="Last Name" type="text" id="joinLNameFld">
+         </div>
+         <div class="table-thing with-label widget uib_w_66 d-margins" data-uib="jquery_mobile/input" data-ver="0">
+          <label class="narrow-control" for="joinEmailFld"></label>
+          <input class="wide-control" placeholder="Email" type="text" id="joinEmailFld">
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </form>
+
+      <div class="grid grid-pad urow uib_row_33 row-height-33" data-uib="layout/row" data-ver="0">
+       <div class="col uib_col_44 col-0_8-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="table-thing with-label widget uib_w_67 d-margins" data-uib="jquery_mobile/input" data-ver="0">
+          <label class="narrow-control" for="joinPhoneFld"></label>
+          <input class="wide-control" placeholder="Phone" type="text" id="joinPhoneFld">
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <div class="col uib_col_45 col-0_4-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="table-thing with-label widget uib_w_68 d-margins" data-uib="jquery_mobile/input" data-ver="0">
+          <label class="narrow-control" for="joinZipFld"></label>
+          <input class="wide-control" placeholder="Zip" type="text" id="joinZipFld">
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+
+      <div class="grid grid-pad urow uib_row_34 row-height-34" data-uib="layout/row" data-ver="0">
+       <div class="col uib_col_46 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="table-thing with-label widget uib_w_92 d-margins" data-uib="jquery_mobile/input" data-ver="0">
+          <label class="narrow-control" for="joinPassFld"></label>
+          <input class="wide-control" placeholder="Password" type="text" id="joinPassFld">
+         </div>
+         <div class="table-thing with-label widget uib_w_69 d-margins" data-uib="jquery_mobile/input" data-ver="0">
+          <label class="narrow-control" for="joinCodeFld"></label>
+          <input class="wide-control" placeholder="Special Code" type="text" id="joinCodeFld">
+         </div><a class="widget uib_w_70 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="joinBtn">Join!</a>
+         <span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+     </div>
+    </div>
+    <!-- /upage-outer -->
+   </div>
+
+
+
+
+
+   <!-- /upage -->
+
+  </div>
+  <script>
+   var pieData = [
+						{
+								value: 30,
+								color:"#F38630"
+						},
+						{
+								value : 50,
+								color : "#E0E4CC"
+						},
+						{
+								value : 100,
+								color : "#69D2E7"
+						}
+				
+				];
+		
+		        var myPie = new Chart(document.getElementById("canvas").getContext("2d")).Pie(pieData);
+  </script>
+  <!-- /uwrap -->
+  <script type="text/javascript">
+   // Wait for device...
+	document.addEventListener("deviceready", onDeviceReady, false);
+	
+	function onDeviceReady() 
+	{
+		// get the device UUID
+		sUDID = device.uuid;
+		
+     		//alert( 'device ready! ' );
+   		$(document).ready(function(){
+   			var sQueryAdd = '&uuid=' + intel.xdk.device.uuid;
+	   		var app = nalusCore.App.init();
+   		});
+	};
+  </script>
+
+
+ </body>
+
+</html>
