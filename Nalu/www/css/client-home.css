@@ -1,0 +1,39 @@
+	.page-home .content-main .mod-intro h2{
+		color:#ffcbb0;
+		text-align:center;
+	}
+		.page-home .content-main .mod-intro h2 span{
+			
+		}
+	.page-home .content-main .mod-intro .subtitle{
+		color:#d98057;
+		text-align:center;
+		line-height: 1.15em;
+		padding:0 10%;
+	}
+.page-home .content-main .content-mod.qr-card{
+	padding:0;
+}
+	.page-home #qr-card{
+		display:block;
+		width:614px;
+		height:384px;
+		background:transparent url(../img/client/card.png) no-repeat 0 0;
+		margin:0 auto;
+		position:relative;
+	}
+		.page-home #qr-card em.barcode{
+			display:none;
+			width:173px;
+			height:173px;
+			position:absolute;
+			left: 222px;
+			top: 167px;
+		}
+.page-home #coupon-salmon{
+	overflow:hidden;
+}
+	.page-home #coupon-salmon img{
+		float:left;
+	}
+

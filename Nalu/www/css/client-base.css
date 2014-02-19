@@ -1,0 +1,17 @@
+div.corner-rounded{
+	border-radius:8px;
+}
+
+
+
+	.content-main .mod-intro h2{
+		color:#cf3a1e;
+		text-align:center;
+	}
+	.content-main .mod-intro .subtitle{
+		color:#ffcbb0;
+		line-height: 1.15em;
+		padding:0;
+		margin-bottom:5%;
+	}
+

@@ -1,40 +1,274 @@
 <!DOCTYPE html>
+
 <html>
 <head>
 	<meta charset="utf-8" />
-	<meta name="format-detection" content="telephone=no" />
-	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
-	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=0.5, maximum-scale=1.0, user-scalable=no;"/>
+	
+	<link rel="stylesheet" href="css/reset-min.css" />
+	<link rel="stylesheet" href="css/libraries/jquery-ui/minified/jquery-ui.min.css" />
+	<link rel="stylesheet" href="css/libraries/jquery.mobile-1.4.0.min.css" />
+	<link href='http://fonts.googleapis.com/css?family=Boogaloo:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/base.css" />
+	<link rel="stylesheet" href="css/panels.css" />
+	<link rel="stylesheet" href="css/nav.css" />
+	<link rel="stylesheet" href="css/header.css" />
+	<link rel="stylesheet" href="css/content.css" />
+	<link rel="stylesheet" href="css/client.css" />
+	<link rel="stylesheet" href="css/queries.css" />
+	<link rel="stylesheet" href="css/override.css" />
+
+	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
 </head>
-<body>
-	<div>
-		<br>
-		<br>
-		<br>
-		<br>
-		<a href="nalu.html">nalu.html</a>
-		<br>
-		<br>
-		<br>
-		<br>
-		<a href="nalu2.html">nalu2.html</a>
-		<br>
-		<br>
-		<br>
-		<br>
-		<a href="home.html">home.html</a>
-		<br>
-		<br>
-		<br>
-		<br>
-		<a href="home-original.html">home-original.html</a>
-		<br>
-		<br>
-		<br>
-		<br>
-		<a href="phonegap.html">phonegap.html</a>
-		<br>
+
+<body class="body-nalu body-page-home" data-version="0.01">
+	<div data-role="panel" id="home-panel-menu" class="panel-menu" data-display="push" data-position="left">
+		<ul class="nav-primary">
+			<li class="first nav-home">
+				<a href="#home" data-ajax="true" data-transition="none">
+					<span>Home</span>
+				</a>
+			</li>
+			<li class="nav-friends">
+				<a href="#friends" data-ajax="true" data-transition="none">
+					<span>Friends</span>
+				</a>
+			</li>
+			<li class="nav-specials">
+				<a href="#specials" data-ajax="true" data-transition="none">
+					<span>Specials</span>
+				</a>
+			</li>
+			<li class="nav-dev">
+				<a href="#dev" data-ajax="true" data-transition="none">
+					<span>Dev</span>
+				</a>
+			</li>
+			<li class="nav-contacts">
+				<a href="contacts.html" data-ajax="false" data-transition="none">
+					<span>contacts.html</span>
+				</a>
+			</li>
+		</ul>
+		<h3 class="logo"></h3>
+	</div>
+	<div data-role="page" id="home" data-page="home" class="page-home">
+		<div data-role="header" class="header-primary">
+		  <em data-href="#home-panel-menu" class="btn btn-menu"><span>Nav</span><i class="fa fa-bars"></i></em>
+		</div>
+		<div class="content-main" data-role="content">
+			<div class="content-mod mod-intro home-header">
+				<h2>Aloha, <span id="aloha-name">Tony</span></h2>
+				<p class="subtitle">Receive $1.00 every time you check in with this app</p>
+			</div>
+			<div class="content-mod qr-card">
+				<div id="qr-card"><em class="barcode"></em></div>
+			</div>
+			<div class="content-mod">
+				<div class="home-coupon corner-rounded" id="coupon-salmon">
+					<img src="img/client/coupon-salmon.png" width="100%" height="100%" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="friends" data-page="friends" class="page-friends">
+		<div data-role="header" class="header-primary">
+		  <em data-href="#friends-panel-menu" class="btn btn-menu"><span>Nav</span><i class="fa fa-bars"></i></em>
+		</div>
+		<style>
+
+
+			/*CLIENT*/
+		</style>
+		<div class="content-main" data-role="content">
+			<div class="content-mod mod-intro home-friends">
+				<h2>Free Lunch!</h2>
+				<p class="subtitle">Invite a friend, and after they download the app - you BOTH get lunch on us!</p>
+				<p class="subtitle">Enter your friend's number below. Make sure it can receive SMS messages:</p>
+			</div>
+			<div class="content-mod mod-friends-form">
+				<form name="friends">
+					<div class="fieldset fieldset-text">
+						<input type="tel" name="friends-phone" id="input-friends-phone" placeholder="(949) 854-8900" data-role="none" />
+					</div>
+					<div class="fieldset fieldset-btn">
+						<button type="submit" name="btn-send" class="btn btn-primary" data-role="none" id="btn-friends-send">Send Invite</button>
+						<label for="btn-send">Sent!</label>
+					</div>
+					<div class="fieldset fieldset-btn">
+						<button type="submit" name="btn-browser" class="btn btn-primary" data-role="none" id="btn-friends-browse">Browse Contacts</button>
+					</div>
+				</form>
+			</div>
+			<div class="content-mod mod-invite-status">
+				<dl>
+				  <dt>949-887-2872</dt>
+					<dd>pending</dd>
+				  <dt>949-887-2872</dt>
+					<dd>pending</dd>
+				  <dt>949-887-2872</dt>
+					<dd>pending</dd>
+				  <dt>949-887-2872</dt>
+					<dd>pending</dd>
+				  <dt>949-887-2872</dt>
+					<dd>pending</dd>
+				</dl>
+			</div>
+		</div>
 	</div>
 	
+	<div data-role="page" id="specials" data-page="specials" class="page-specials">
+		<div data-role="header" class="header-primary">
+		  <em data-href="#specials-panel-menu" class="btn btn-menu"><span>Nav</span><i class="fa fa-bars"></i></em>
+		</div>
+		<div class="content-main" data-role="content">
+			<div class="content-mod mod-intro">
+				<h2>Specials</h2>
+			</div>
+			<div class="content-mod mod-list">
+				<ul id="list-specials">
+					<li>
+						<div class="item-header">
+							<p class="title">Special title would go here right now</p>
+							<i class="fa fa-arrow-right"></i>
+							<i class="fa fa-arrow-down"></i>
+						</div>
+						<div class="item-content">
+							<p class="details">Receive $1.00 every time you check in with this app</p>
+							<p class="expiration">Expiration Date: <span class="expiration-date">12/14/2014</span></p>
+							<img src="img/client/special-salmon.png" alt="" />
+						</div>
+					</li>
+					<li>
+						<div class="item-header">
+							<p class="title">Special title would go here right now</p>
+							<i class="fa fa-arrow-right"></i>
+							<i class="fa fa-arrow-down"></i>
+						</div>
+						<div class="item-content">
+							<p class="details">Receive $1.00 every time you check in with this app</p>
+							<p class="expiration">Expiration Date: <span class="expiration-date">12/14/2014</span></p>
+							<img src="img/client/special-salmon.png" alt="" />
+						</div>
+					</li>
+					<li>
+						<div class="item-header">
+							<p class="title">Special title would go here right now</p>
+							<i class="fa fa-arrow-right"></i>
+							<i class="fa fa-arrow-down"></i>
+						</div>
+						<div class="item-content">
+							<p class="details">Receive $1.00 every time you check in with this app</p>
+							<p class="expiration">Expiration Date: <span class="expiration-date">12/14/2014</span></p>
+							<img src="img/client/special-salmon.png" alt="" />
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div data-role="page" id="dev" data-page="dev" class="page-dev">
+		<div data-role="header" class="header-primary">
+		  <em data-href="#dev-panel-menu" class="btn btn-menu"><span>Nav</span><i class="fa fa-bars"></i></em>
+		</div>
+		<div class="content-main" data-role="content">
+			<a href="#login" data-ajax="true" data-transition="none">
+				<span>Login</span>
+			</a>
+			<a href="#register" data-ajax="true" data-transition="none">
+				<span>Register</span>
+			</a>
+			<a href="#" data-ajax="true" data-transition="none" id="btn-logout">
+				<span>Logout</span>
+			</a>
+			<a href="contacts.html" data-ajax="false" data-transition="none">
+				<span>contacts</span>
+			</a>
+		</div>
+	</div>
+	
+	<div data-role="page" id="login" data-page="login" class="page-login">
+		<div data-role="header" class="header-primary">
+		  <em data-href="#login-panel-menu" class="btn btn-menu"><span>Nav</span><i class="fa fa-bars"></i></em>
+		</div>
+		<div class="content-main" data-role="content">
+			<div class="content-mod mod-intro">
+				<h2>Login</h2>
+			</div>					
+			<div class="content-mod mod-form">
+				<form id="form-login" name="form-login">
+					<div class="fieldset fieldset-text">
+						<input type="tel" name="login-phone" id="login-phone" placeholder="Phone" />
+						<input type="password" name="login-password" id="login-password" placeholder="Password" />
+					</div>
+					<div class="fieldset fieldset-btn">
+						<div class="fieldset-col fieldset-col-1">
+							<a href="#dev" class="link link-secondary" data-role="none" id="link-skip">Dev</a>
+						</div>
+						<div class="fieldset-col fieldset-col-2">
+							<button type="submit" class="btn btn-primary" data-role="none">Login</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	<div data-role="page" id="register" data-page="register" class="page-register">
+		<div data-role="header" class="header-primary">
+		  <em data-href="#register-panel-menu" class="btn btn-menu"><span>Nav</span><i class="fa fa-bars"></i></em>
+		</div>
+		<div class="content-main" data-role="content">
+			<div class="content-mod mod-intro">
+				<h2>Register</h2>
+			</div>					
+			<div class="content-mod mod-form">
+				<form id="form-register" name="form-register">
+					<div class="fieldset fieldset-text">
+						<input type="text" name="register-first" id="register-first" placeholder="First Name" />
+						<input type="text" name="register-last" id="register-last" placeholder="Last Name" />
+						<input type="email" name="register-email" id="register-email" placeholder="Email" />
+					</div>
+					<div class="fieldset fieldset-col">
+						<div class="fieldset-col fieldset-col-1">
+							<input type="tel" name="register-phone" id="register-phone" placeholder="Phone" />
+						</div>
+						<div class="fieldset-col fieldset-col-2">
+							<input type="tel" name="register-zip" id="register-zip" placeholder="ZIP" maxlength="5" />
+						</div>
+
+					</div>
+					<div class="fieldset fieldset-text">
+						<input type="password" name="register-password" id="register-password" placeholder="Password" />
+						<input type="text" name="register-code" id="register-code" placeholder="Code" />
+					</div>
+					<div class="fieldset fieldset-btn">
+						<div class="fieldset-col fieldset-col-1">
+							<a href="#dev" class="link link-secondary" data-role="none" id="link-skip">Dev</a>
+						</div>
+						<div class="fieldset-col fieldset-col-2">
+							<button type="submit" class="btn btn-primary" data-role="none">Register</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	<script src="js/libraries/handlebars-v1.1.2.js"></script>
+	<script src="js/libraries/handlebars.helpers.js"></script>
+
+	<script src="js/libraries/jquery-1.11.0.min.js"></script>
+	<script src="js/libraries/jquery-ui-1.10.4.js"></script>
+	<script src="js/libraries/jquery.mobile-1.4.0.min.js"></script>
+	<script src="js/plugins/jquery.qrcode.min.js"></script>
+	<script src="js/helpers.js"></script>
+
+	
+    <script data-main="js/requireapp" src="js/libraries/require.js"></script>
+
 </body>
 </html>

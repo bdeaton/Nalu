@@ -2,7 +2,13 @@
 body,html{
 	font-size:18px;
 	font-weight:100;
-	color:#48565b;
+	color:#48565b;	
+}
+body, a, input, select, textarea, button, .ui-btn {
+	font-family:"Boogaloo";
+}
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper{
+	text-shadow:none;
 }
 a{
 	text-decoration:underline;
@@ -22,9 +28,6 @@ li{
 input[type=range]{
   
 }
-body,a,button{
-	font-family:"Boogaloo";
-}
 h3,
 h4{
 	color:#a2b3ba;
@@ -38,7 +41,8 @@ input:focus {
 	outline-offset:0;
 }
 
-/*	PAGE-LEVEL	*/
-
-
+/*	GLOBAL	*/
+div.corner-rounded{
+	border-radius:8px;
+}
 

@@ -3,3 +3,19 @@
 	background:transparent url(../img/main-background.png) repeat 0 145px;
 	z-index:0;
 }
+
+.content-main{
+	padding:0;
+	position: relative;
+}
+	.content-main .content-mod{
+		margin-bottom:5%;
+		padding:0 4.375%;
+	}
+		.content-main .mod-intro h2{
+			font-size:4em;
+		}
+		.content-main .mod-intro .subtitle{
+			font-size: 2.6em;
+		}
+
